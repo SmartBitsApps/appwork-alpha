@@ -79,26 +79,44 @@
       <!-- / Logo -->
 
       <!-- Form -->
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name))  do |f| %>
       <form class="my-5">
+        
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="text" class="form-control">
+          <!--<input type="text" class="form-control">-->
+          <%= f.input :email,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "email", class: 'form-control' },
+                label: false %>
         </div>
         <div class="form-group">
           <label class="form-label d-flex justify-content-between align-items-end">
             <div>Password</div>
             <a href="javascript:void(0)" class="d-block small">Forgot password?</a>
           </label>
-          <input type="password" class="form-control">
+          <!--<input type="password" class="form-control">-->
+          <%= f.input :password,
+                required: false,
+                input_html: { autocomplete: "current-password", class: 'form-control' },
+                label: false 
+          %>
         </div>
         <div class="d-flex justify-content-between align-items-center m-0">
           <label class="custom-control custom-checkbox m-0">
-            <input type="checkbox" class="custom-control-input">
-            <span class="custom-control-label">Remember me</span>
+            <!--<input type="checkbox" class="custom-control-input">-->
+            <%= f.input :remember_me, as: :boolean,
+                input_html: { class: 'custom-control-input' }
+            %>
+            
           </label>
-          <button type="button" class="btn btn-primary">Sign In</button>
+          <!--<button type="button" class="btn btn-primary">Sign In</button>-->
+          <%= f.button :submit, "Log in", input_html: { class: 'btn btn-primary' } %>
         </div>
+        
       </form>
+      <% end %>
       <!-- / Form -->
 
       <div class="text-center text-muted">
@@ -126,24 +144,3 @@
 </html>
 
 
-
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
