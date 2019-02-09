@@ -16,4 +16,12 @@
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
+//= require js/material-ripple
+//= require js/layout-helpers
+//= require js/theme-settings
+//= require js/pace
+//= require js/sidenav
+//= require libs/perfect-scrollbar/perfect-scrollbar
+//= require js/demo
 //= require_tree .
+
