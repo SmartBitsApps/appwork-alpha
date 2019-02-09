@@ -79,8 +79,8 @@
       <!-- / Logo -->
 
       <!-- Form -->
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name))  do |f| %>
-      <form class="my-5">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "my-5"} )  do |f| %>
+      <form class="">
         
         <div class="form-group">
           <label class="form-label">Email</label>
@@ -106,22 +106,22 @@
         <div class="d-flex justify-content-between align-items-center m-0">
           <label class="custom-control custom-checkbox m-0">
             <!--<input type="checkbox" class="custom-control-input">-->
-            <%= f.input :remember_me, as: :boolean,
+            <%#= f.input :remember_me, as: :boolean,
                 input_html: { class: 'custom-control-input' }
             %>
             
           </label>
           <!--<button type="button" class="btn btn-primary">Sign In</button>-->
-          <%= f.button :submit, "Log in", input_html: { class: 'btn btn-primary' } %>
+          <%= f.button :submit, "Log in", wrapper_html: { class: 'btn btn-primary' } %>
         </div>
         
       </form>
       <% end %>
       <!-- / Form -->
 
-      <div class="text-center text-muted">
-        Don't have an account yet? <a href="javascript:void(0)">Sign Up</a>
-      </div>
+      <!--<div class="text-center text-muted">-->
+      <!--  Don't have an account yet? <a href="javascript:void(0)">Sign Up</a>-->
+      <!--</div>-->
 
     </div>
   </div>

@@ -22,6 +22,6 @@
 //= require js/pace
 //= require js/sidenav
 //= require libs/perfect-scrollbar/perfect-scrollbar
-// require js/demo
+//= require js/demo
 //= require_tree .
 
