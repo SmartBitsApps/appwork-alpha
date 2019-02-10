@@ -34,10 +34,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # design
+gem 'normalize-rails'
 gem 'bootstrap', '~> 4.2.1'
 gem 'popper_js', '~> 1.14.5'
 gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+#gem "font-ionicons-rails", git: 'https://github.com/ricardoemerson/font-ionicons-rails.git'
+
 
 # security
 gem 'devise', '~> 4.2'

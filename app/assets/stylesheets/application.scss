@@ -10,10 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- * require_tree .
- * require_self
-
  */
+ 
+ /* Basic css libs */
+@import "normalize-rails";
 @import "bootstrap";
 @import "font-awesome";
 @import "css/rtl/appwork";
@@ -23,3 +23,28 @@
 @import "css/demo";
 @import "libs/perfect-scrollbar/perfect-scrollbar";
 @import "css/pages/authentication";
+// @import "ionicons";
+
+ /* Shop_page:index */
+
+@import "css/rtl/uikit";
+@import "css/shop";
+@import "libs/swiper/swiper";
+@import "libs/nouislider/nouislider";
+
+
+@font-face {
+    font-family: 'ionicons';
+    src: url(font-path('ionicons.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('ionicons.woff')) format('woff'), 
+         url(font-path('ionicons.ttf'))  format('truetype'),
+         url(font-path('ionicons.svg') + "#MyFont") format('svg');
+}
+
+@font-face {
+    font-family: 'Linearicons-Free';
+    src: url(font-path('Linearicons-Free.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('Linearicons-Free.woff')) format('woff'), 
+         url(font-path('Linearicons-Free.ttf'))  format('truetype'),
+         url(font-path('Linearicons-Free.svg') + "#MyFont") format('svg');
+}

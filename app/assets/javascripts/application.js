@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//
+//
+//  # Basic js libs
+//
 //= require rails-ujs
 //= require jquery3
 //= require popper
@@ -23,5 +27,16 @@
 //= require js/sidenav
 //= require libs/perfect-scrollbar/perfect-scrollbar
 //= require js/demo
-//= require_tree .
+//
+//
+//  # shop_page:index
+//
+//= require js/mega-dropdown
+//= require libs/swiper/swiper
+//= require libs/numeral/numeral
+//= require libs/nouislider/nouislider
+//= require js/shop.js
+
+// require_tree .
+
 
